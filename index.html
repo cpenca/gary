@@ -3,519 +3,428 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="description" content="Gary Penca Studio — marine art, botanical pastels, mixed media, and original artwork.">
     <title>Gary Penca Studio</title>
-
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Small additions for the expanded five-section navigation and text-only About section. */
+        .main-nav { flex-wrap: wrap; justify-content: flex-end; }
+        .about-inner.about-text-only { grid-template-columns: 1fr; }
+        .about-inner.about-text-only .about-copy { margin: 0 auto; text-align: center; }
+        @media (max-width: 700px) {
+            .main-nav { justify-content: center; }
+        }
+    </style>
 </head>
-
 <body>
 
-    <!-- =========================
-         HEADER / NAVIGATION
-    ========================== -->
     <header class="site-header">
         <div class="header-inner">
-
-            <a href="#home" class="logo">
-                Gary Penca Studio
-            </a>
-
-            <nav class="main-nav">
-                <a href="#marine">Marine Art</a>
-                <a href="#orchids">Orchids</a>
-                <a href="#other">Other Works</a>
+            <a href="#home" class="logo">Gary Penca Studio</a>
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="#under-the-pier">Under the Pier</a> <a href="#mixed-media">Mixed Media: Airbrush with Gouache</a> <a href="#fish-out-of-water">Fish out of Water</a> <a href="#botanicals">Botanicals</a> <a href="#balloons">Balloons</a>
                 <a href="#about">About</a>
                 <a href="#contact">Contact</a>
             </nav>
-
         </div>
     </header>
 
-
-    <!-- =========================
-         HERO
-    ========================== -->
-    <section id="home" class="hero">
-
-        <div class="hero-overlay"></div>
-
+    <section id="home" class="hero" style="background-image: linear-gradient(rgba(9, 33, 48, 0.55), rgba(9, 33, 48, 0.62)), url('images/Under%20the%20Pier/New%20Arrivals.png');">
         <div class="hero-content">
             <p class="eyebrow">Original Artwork</p>
-
             <h1>Gary Penca Studio</h1>
-
-            <p class="hero-description">
-                Marine paintings, pastel orchids, and original works inspired
-                by the natural world.
-            </p>
-
-            <a href="#marine" class="hero-button">
-                View the Work
-            </a>
+            <p class="hero-description">Marine art, botanical pastels, mixed media, and original works inspired by the natural world.</p>
+            <a href="#under-the-pier" class="hero-button">View the Work</a>
         </div>
-
     </section>
 
-
-    <!-- =========================
-         MARINE ART
-    ========================== -->
-    <section id="marine" class="art-section">
-
+    <section id="under-the-pier" class="art-section">
         <div class="section-intro">
             <p class="section-number">01</p>
-
-            <h2>Marine Art</h2>
-
-            <p>
-                The sea has always been one of my greatest sources of inspiration.
-                These works explore boats, coastlines, changing skies, reflected
-                light, and the atmosphere of life on the water.
-            </p>
+            <h2>Under the Pier</h2>
+            <p>A collection inspired by the hidden marine world beneath the pier—fish, movement, light, and the layered life below the surface.</p>
         </div>
-
 
         <div class="gallery-wrapper">
-
-            <button
-                class="gallery-arrow gallery-arrow-left"
-                aria-label="Previous marine artwork"
-            >
-                &#10094;
-            </button>
-
+            <button class="gallery-arrow gallery-arrow-left" aria-label="Previous Under the Pier artwork">&#10094;</button>
 
             <div class="gallery">
-
                 <figure class="art-card">
-                    <img
-                        src="images/marine-01.jpg"
-                        alt="Marine artwork by Gary Penca"
-                    >
+                    <img src="images/Under%20the%20Pier/New%20Arrivals.png" alt="New Arrivals by Gary Penca" loading="lazy">
                     <figcaption>
-                        <span>Harbor Morning</span>
-                        <small>Oil on canvas</small>
+                        <span>New Arrivals</span>
+                        <small>Marine Art</small>
                     </figcaption>
                 </figure>
-
-
                 <figure class="art-card">
-                    <img
-                        src="images/marine-02.jpg"
-                        alt="Marine artwork by Gary Penca"
-                    >
+                    <img src="images/Under%20the%20Pier/Watchful%20Eyes%20matted.png" alt="Watchful Eyes by Gary Penca" loading="lazy">
                     <figcaption>
-                        <span>Off the Coast</span>
-                        <small>Oil on canvas</small>
+                        <span>Watchful Eyes</span>
+                        <small>Marine Art</small>
                     </figcaption>
                 </figure>
-
-
                 <figure class="art-card">
-                    <img
-                        src="images/marine-03.jpg"
-                        alt="Marine artwork by Gary Penca"
-                    >
+                    <img src="images/Under%20the%20Pier/Utopia%20matted.png" alt="Utopia by Gary Penca" loading="lazy">
                     <figcaption>
-                        <span>Evening Sail</span>
-                        <small>Oil on canvas</small>
+                        <span>Utopia</span>
+                        <small>Marine Art</small>
                     </figcaption>
                 </figure>
-
-
                 <figure class="art-card">
-                    <img
-                        src="images/marine-04.jpg"
-                        alt="Marine artwork by Gary Penca"
-                    >
+                    <img src="images/Under%20the%20Pier/Cruising%20Tarpon%20matted.png" alt="Cruising Tarpon by Gary Penca" loading="lazy">
                     <figcaption>
-                        <span>Blue Water</span>
-                        <small>Oil on canvas</small>
+                        <span>Cruising Tarpon</span>
+                        <small>Marine Art</small>
                     </figcaption>
                 </figure>
-
-
                 <figure class="art-card">
-                    <img
-                        src="images/marine-05.jpg"
-                        alt="Marine artwork by Gary Penca"
-                    >
+                    <img src="images/Under%20the%20Pier/Snook%20Buffet%20matted.png" alt="Snook Buffet by Gary Penca" loading="lazy">
                     <figcaption>
-                        <span>Quiet Anchorage</span>
-                        <small>Oil on canvas</small>
+                        <span>Snook Buffet</span>
+                        <small>Marine Art</small>
                     </figcaption>
                 </figure>
-
-
-                <figure class="art-card">
-                    <img
-                        src="images/marine-06.jpg"
-                        alt="Marine artwork by Gary Penca"
-                    >
-                    <figcaption>
-                        <span>Heading Home</span>
-                        <small>Oil on canvas</small>
-                    </figcaption>
-                </figure>
-
             </div>
 
-
-            <button
-                class="gallery-arrow gallery-arrow-right"
-                aria-label="Next marine artwork"
-            >
-                &#10095;
-            </button>
-
+            <button class="gallery-arrow gallery-arrow-right" aria-label="Next Under the Pier artwork">&#10095;</button>
         </div>
 
-        <p class="swipe-hint">
-            Explore more artwork &nbsp; ← &nbsp; swipe &nbsp; →
-        </p>
-
+        <p class="swipe-hint">Explore more artwork &nbsp; ← &nbsp; swipe &nbsp; →</p>
     </section>
-
-
-
-    <!-- =========================
-         ORCHIDS
-    ========================== -->
-    <section id="orchids" class="art-section alternate-section">
-
+    <section id="mixed-media" class="art-section alternate-section">
         <div class="section-intro">
             <p class="section-number">02</p>
-
-            <h2>Orchids</h2>
-
-            <p>
-                Orchids offer an entirely different kind of landscape.
-                Through pastel, I explore their extraordinary shapes,
-                subtle colors, and the delicate play of light across
-                petals and leaves.
-            </p>
+            <h2>Mixed Media: Airbrush with Gouache</h2>
+            <p>Marine subjects created with a combination of airbrush and gouache, exploring reef life, color, depth, and underwater atmosphere.</p>
         </div>
-
 
         <div class="gallery-wrapper">
-
-            <button
-                class="gallery-arrow gallery-arrow-left"
-                aria-label="Previous orchid artwork"
-            >
-                &#10094;
-            </button>
-
+            <button class="gallery-arrow gallery-arrow-left" aria-label="Previous Mixed Media: Airbrush with Gouache artwork">&#10094;</button>
 
             <div class="gallery">
-
                 <figure class="art-card">
-                    <img
-                        src="images/orchid-01.jpg"
-                        alt="Orchid pastel by Gary Penca"
-                    >
+                    <img src="images/Mixed%20Media%3AAirbrush%20with%20%20Gouache/Patch%20reef%20matted%2015%22.png" alt="Patch reef by Gary Penca" loading="lazy">
                     <figcaption>
-                        <span>White Orchid</span>
-                        <small>Pastel</small>
+                        <span>Patch reef</span>
+                        <small>Airbrush + Gouache</small>
                     </figcaption>
                 </figure>
-
-
                 <figure class="art-card">
-                    <img
-                        src="images/orchid-02.jpg"
-                        alt="Orchid pastel by Gary Penca"
-                    >
+                    <img src="images/Mixed%20Media%3AAirbrush%20with%20%20Gouache/Reef%20Hunter%20matted%2015%22.png" alt="Reef Hunter by Gary Penca" loading="lazy">
                     <figcaption>
-                        <span>Morning Bloom</span>
-                        <small>Pastel</small>
+                        <span>Reef Hunter</span>
+                        <small>Airbrush + Gouache</small>
                     </figcaption>
                 </figure>
-
-
                 <figure class="art-card">
-                    <img
-                        src="images/orchid-03.jpg"
-                        alt="Orchid pastel by Gary Penca"
-                    >
+                    <img src="images/Mixed%20Media%3AAirbrush%20with%20%20Gouache/No%20Escape%2015%22.png" alt="No Escape by Gary Penca" loading="lazy">
                     <figcaption>
-                        <span>Pink Orchid</span>
-                        <small>Pastel</small>
+                        <span>No Escape</span>
+                        <small>Airbrush + Gouache</small>
                     </figcaption>
                 </figure>
-
-
                 <figure class="art-card">
-                    <img
-                        src="images/orchid-04.jpg"
-                        alt="Orchid pastel by Gary Penca"
-                    >
+                    <img src="images/Mixed%20Media%3AAirbrush%20with%20%20Gouache/Surreal%20Shallows%2015%22.png" alt="Surreal Shallows by Gary Penca" loading="lazy">
                     <figcaption>
-                        <span>Study in Violet</span>
-                        <small>Pastel</small>
+                        <span>Surreal Shallows</span>
+                        <small>Airbrush + Gouache</small>
                     </figcaption>
                 </figure>
-
-
                 <figure class="art-card">
-                    <img
-                        src="images/orchid-05.jpg"
-                        alt="Orchid pastel by Gary Penca"
-                    >
+                    <img src="images/Mixed%20Media%3AAirbrush%20with%20%20Gouache/Rainbow%20Butterflyfish%2015%22.png" alt="Rainbow Butterflyfish by Gary Penca" loading="lazy">
                     <figcaption>
-                        <span>Golden Light</span>
-                        <small>Pastel</small>
+                        <span>Rainbow Butterflyfish</span>
+                        <small>Airbrush + Gouache</small>
                     </figcaption>
                 </figure>
-
+                <figure class="art-card">
+                    <img src="images/Mixed%20Media%3AAirbrush%20with%20%20Gouache/The%20Bubble%2015%22.png" alt="The Bubble by Gary Penca" loading="lazy">
+                    <figcaption>
+                        <span>The Bubble</span>
+                        <small>Airbrush + Gouache</small>
+                    </figcaption>
+                </figure>
+                <figure class="art-card">
+                    <img src="images/Mixed%20Media%3AAirbrush%20with%20%20Gouache/Lionfish%2015%22.png" alt="Lionfish by Gary Penca" loading="lazy">
+                    <figcaption>
+                        <span>Lionfish</span>
+                        <small>Airbrush + Gouache</small>
+                    </figcaption>
+                </figure>
+                <figure class="art-card">
+                    <img src="images/Mixed%20Media%3AAirbrush%20with%20%20Gouache/Conspiculates%2015%22.png" alt="Conspiculates by Gary Penca" loading="lazy">
+                    <figcaption>
+                        <span>Conspiculates</span>
+                        <small>Airbrush + Gouache</small>
+                    </figcaption>
+                </figure>
+                <figure class="art-card">
+                    <img src="images/Mixed%20Media%3AAirbrush%20with%20%20Gouache/Ledge%20.png" alt="Ledge by Gary Penca" loading="lazy">
+                    <figcaption>
+                        <span>Ledge</span>
+                        <small>Airbrush + Gouache</small>
+                    </figcaption>
+                </figure>
+                <figure class="art-card">
+                    <img src="images/Mixed%20Media%3AAirbrush%20with%20%20Gouache/Visionary%20%2015%22.png" alt="Visionary by Gary Penca" loading="lazy">
+                    <figcaption>
+                        <span>Visionary</span>
+                        <small>Airbrush + Gouache</small>
+                    </figcaption>
+                </figure>
             </div>
 
-
-            <button
-                class="gallery-arrow gallery-arrow-right"
-                aria-label="Next orchid artwork"
-            >
-                &#10095;
-            </button>
-
+            <button class="gallery-arrow gallery-arrow-right" aria-label="Next Mixed Media: Airbrush with Gouache artwork">&#10095;</button>
         </div>
 
-        <p class="swipe-hint">
-            Explore more artwork &nbsp; ← &nbsp; swipe &nbsp; →
-        </p>
-
+        <p class="swipe-hint">Explore more artwork &nbsp; ← &nbsp; swipe &nbsp; →</p>
     </section>
-
-
-
-    <!-- =========================
-         OTHER WORKS
-    ========================== -->
-    <section id="other" class="art-section">
-
+    <section id="fish-out-of-water" class="art-section">
         <div class="section-intro">
             <p class="section-number">03</p>
-
-            <h2>Other Works</h2>
-
-            <p>
-                Beyond the sea and the garden, I am drawn to landscapes,
-                architecture, still life, and subjects discovered through
-                travel and everyday observation.
-            </p>
+            <h2>Fish out of Water</h2>
+            <p>A playful series bringing familiar reef and ocean life into a different visual setting, with each subject presented as an individual study.</p>
         </div>
-
 
         <div class="gallery-wrapper">
-
-            <button
-                class="gallery-arrow gallery-arrow-left"
-                aria-label="Previous artwork"
-            >
-                &#10094;
-            </button>
-
+            <button class="gallery-arrow gallery-arrow-left" aria-label="Previous Fish out of Water artwork">&#10094;</button>
 
             <div class="gallery">
-
                 <figure class="art-card">
-                    <img
-                        src="images/other-01.jpg"
-                        alt="Artwork by Gary Penca"
-                    >
+                    <img src="images/Fish%20out%20of%20Water/Smooth%20Trunkfish%20.jpg" alt="Smooth Trunkfish by Gary Penca" loading="lazy">
                     <figcaption>
-                        <span>Garden Path</span>
-                        <small>Pastel</small>
+                        <span>Smooth Trunkfish</span>
+                        <small>Marine Art</small>
                     </figcaption>
                 </figure>
-
-
                 <figure class="art-card">
-                    <img
-                        src="images/other-02.jpg"
-                        alt="Artwork by Gary Penca"
-                    >
+                    <img src="images/Fish%20out%20of%20Water/Moorish%20Idol%20.jpg" alt="Moorish Idol by Gary Penca" loading="lazy">
                     <figcaption>
-                        <span>Afternoon Light</span>
-                        <small>Pastel</small>
+                        <span>Moorish Idol</span>
+                        <small>Marine Art</small>
                     </figcaption>
                 </figure>
-
-
                 <figure class="art-card">
-                    <img
-                        src="images/other-03.jpg"
-                        alt="Artwork by Gary Penca"
-                    >
+                    <img src="images/Fish%20out%20of%20Water/Spotted%20Trunkfish.jpg" alt="Spotted Trunkfish by Gary Penca" loading="lazy">
                     <figcaption>
-                        <span>Still Life</span>
-                        <small>Pastel</small>
+                        <span>Spotted Trunkfish</span>
+                        <small>Marine Art</small>
                     </figcaption>
                 </figure>
-
-
                 <figure class="art-card">
-                    <img
-                        src="images/other-04.jpg"
-                        alt="Artwork by Gary Penca"
-                    >
+                    <img src="images/Fish%20out%20of%20Water/Clownfish%20.jpg" alt="Clownfish by Gary Penca" loading="lazy">
                     <figcaption>
-                        <span>Summer Landscape</span>
-                        <small>Pastel</small>
+                        <span>Clownfish</span>
+                        <small>Marine Art</small>
                     </figcaption>
                 </figure>
-
+                <figure class="art-card">
+                    <img src="images/Fish%20out%20of%20Water/Four%20Eye%20Butterflyfish.jpg" alt="Four Eye Butterflyfish by Gary Penca" loading="lazy">
+                    <figcaption>
+                        <span>Four Eye Butterflyfish</span>
+                        <small>Marine Art</small>
+                    </figcaption>
+                </figure>
+                <figure class="art-card">
+                    <img src="images/Fish%20out%20of%20Water/Conch.jpg" alt="Conch by Gary Penca" loading="lazy">
+                    <figcaption>
+                        <span>Conch</span>
+                        <small>Marine Art</small>
+                    </figcaption>
+                </figure>
+                <figure class="art-card">
+                    <img src="images/Fish%20out%20of%20Water/French%20Angelfish.jpg" alt="French Angelfish by Gary Penca" loading="lazy">
+                    <figcaption>
+                        <span>French Angelfish</span>
+                        <small>Marine Art</small>
+                    </figcaption>
+                </figure>
+                <figure class="art-card">
+                    <img src="images/Fish%20out%20of%20Water/Yellow%20Seahorse.jpg" alt="Yellow Seahorse by Gary Penca" loading="lazy">
+                    <figcaption>
+                        <span>Yellow Seahorse</span>
+                        <small>Marine Art</small>
+                    </figcaption>
+                </figure>
+                <figure class="art-card">
+                    <img src="images/Fish%20out%20of%20Water/Queen%20angelfish.jpg" alt="Queen angelfish by Gary Penca" loading="lazy">
+                    <figcaption>
+                        <span>Queen angelfish</span>
+                        <small>Marine Art</small>
+                    </figcaption>
+                </figure>
+                <figure class="art-card">
+                    <img src="images/Fish%20out%20of%20Water/Balloonfish.jpg" alt="Balloonfish by Gary Penca" loading="lazy">
+                    <figcaption>
+                        <span>Balloonfish</span>
+                        <small>Marine Art</small>
+                    </figcaption>
+                </figure>
             </div>
 
-
-            <button
-                class="gallery-arrow gallery-arrow-right"
-                aria-label="Next artwork"
-            >
-                &#10095;
-            </button>
-
+            <button class="gallery-arrow gallery-arrow-right" aria-label="Next Fish out of Water artwork">&#10095;</button>
         </div>
 
-        <p class="swipe-hint">
-            Explore more artwork &nbsp; ← &nbsp; swipe &nbsp; →
-        </p>
-
+        <p class="swipe-hint">Explore more artwork &nbsp; ← &nbsp; swipe &nbsp; →</p>
     </section>
-
-
-
-    <!-- =========================
-         ABOUT
-    ========================== -->
-    <section id="about" class="about-section">
-
-        <div class="about-inner">
-
-            <div class="about-image">
-                <img
-                    src="images/gary-penca.jpg"
-                    alt="Artist Gary Penca"
-                >
-            </div>
-
-
-            <div class="about-copy">
-
-                <p class="section-number">04</p>
-
-                <h2>About the Artist</h2>
-
-                <p>
-                    Gary Penca is an artist whose work reflects a lifelong
-                    fascination with the sea, the natural world, color,
-                    atmosphere, and light.
-                </p>
-
-                <p>
-                    Add Gary's artist biography here. This section can include
-                    his background, artistic influences, exhibitions, awards,
-                    or the story behind his work.
-                </p>
-
-            </div>
-
+    <section id="botanicals" class="art-section alternate-section">
+        <div class="section-intro">
+            <p class="section-number">04</p>
+            <h2>Botanicals</h2>
+            <p>Pastels and botanical studies inspired by orchids, flowers, insects, and the vivid forms and colors found in the natural world.</p>
         </div>
 
+        <div class="gallery-wrapper">
+            <button class="gallery-arrow gallery-arrow-left" aria-label="Previous Botanicals artwork">&#10094;</button>
+
+            <div class="gallery">
+                <figure class="art-card">
+                    <img src="images/Botanicals/White%20Moth%20Orchid%20.jpg" alt="White Moth Orchid by Gary Penca" loading="lazy">
+                    <figcaption>
+                        <span>White Moth Orchid</span>
+                        <small>Pastel / Botanical</small>
+                    </figcaption>
+                </figure>
+                <figure class="art-card">
+                    <img src="images/Botanicals/Salmon%20Moth%20orchid%20.jpg" alt="Salmon Moth orchid by Gary Penca" loading="lazy">
+                    <figcaption>
+                        <span>Salmon Moth orchid</span>
+                        <small>Pastel / Botanical</small>
+                    </figcaption>
+                </figure>
+                <figure class="art-card">
+                    <img src="images/Botanicals/Honeybee%20.jpg" alt="Honeybee by Gary Penca" loading="lazy">
+                    <figcaption>
+                        <span>Honeybee</span>
+                        <small>Pastel / Botanical</small>
+                    </figcaption>
+                </figure>
+                <figure class="art-card">
+                    <img src="images/Botanicals/Maroon%20Moth%20and%20Yellow%20Butterfly%20Orchids.jpg" alt="Maroon Moth and Yellow Butterfly Orchids by Gary Penca" loading="lazy">
+                    <figcaption>
+                        <span>Maroon Moth and Yellow Butterfly Orchids</span>
+                        <small>Pastel / Botanical</small>
+                    </figcaption>
+                </figure>
+                <figure class="art-card">
+                    <img src="images/Botanicals/Paradise%20.jpg" alt="Paradise by Gary Penca" loading="lazy">
+                    <figcaption>
+                        <span>Paradise</span>
+                        <small>Pastel / Botanical</small>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <button class="gallery-arrow gallery-arrow-right" aria-label="Next Botanicals artwork">&#10095;</button>
+        </div>
+
+        <p class="swipe-hint">Explore more artwork &nbsp; ← &nbsp; swipe &nbsp; →</p>
     </section>
-
-
-
-    <!-- =========================
-         CONTACT
-    ========================== -->
-    <section id="contact" class="contact-section">
-
-        <div class="contact-inner">
-
+    <section id="balloons" class="art-section">
+        <div class="section-intro">
             <p class="section-number">05</p>
-
-            <h2>Contact the Studio</h2>
-
-            <p>
-                For questions about available artwork, commissions,
-                exhibitions, or purchasing a piece, please get in touch.
-            </p>
-
-            <a
-                href="mailto:studio@example.com"
-                class="contact-button"
-            >
-                studio@example.com
-            </a>
-
+            <h2>Balloons</h2>
+            <p>A series focused on color, form, reflection, and the deceptively simple visual character of balloons.</p>
         </div>
 
+        <div class="gallery-wrapper">
+            <button class="gallery-arrow gallery-arrow-left" aria-label="Previous Balloons artwork">&#10094;</button>
+
+            <div class="gallery">
+                <figure class="art-card">
+                    <img src="images/balloons/Blue%20Balloon.jpg" alt="Blue Balloon by Gary Penca" loading="lazy">
+                    <figcaption>
+                        <span>Blue Balloon</span>
+                        <small>Studio Work</small>
+                    </figcaption>
+                </figure>
+                <figure class="art-card">
+                    <img src="images/balloons/White%20Balloon.jpg" alt="White Balloon by Gary Penca" loading="lazy">
+                    <figcaption>
+                        <span>White Balloon</span>
+                        <small>Studio Work</small>
+                    </figcaption>
+                </figure>
+                <figure class="art-card">
+                    <img src="images/balloons/Yellow%20Balloon.jpg" alt="Yellow Balloon by Gary Penca" loading="lazy">
+                    <figcaption>
+                        <span>Yellow Balloon</span>
+                        <small>Studio Work</small>
+                    </figcaption>
+                </figure>
+                <figure class="art-card">
+                    <img src="images/balloons/Red%20Balloon.jpg" alt="Red Balloon by Gary Penca" loading="lazy">
+                    <figcaption>
+                        <span>Red Balloon</span>
+                        <small>Studio Work</small>
+                    </figcaption>
+                </figure>
+                <figure class="art-card">
+                    <img src="images/balloons/Green%20Balloon%20.jpg" alt="Green Balloon by Gary Penca" loading="lazy">
+                    <figcaption>
+                        <span>Green Balloon</span>
+                        <small>Studio Work</small>
+                    </figcaption>
+                </figure>
+                <figure class="art-card">
+                    <img src="images/balloons/Blue%20and%20Red%20Balloon.jpg" alt="Blue and Red Balloon by Gary Penca" loading="lazy">
+                    <figcaption>
+                        <span>Blue and Red Balloon</span>
+                        <small>Studio Work</small>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <button class="gallery-arrow gallery-arrow-right" aria-label="Next Balloons artwork">&#10095;</button>
+        </div>
+
+        <p class="swipe-hint">Explore more artwork &nbsp; ← &nbsp; swipe &nbsp; →</p>
     </section>
 
+    <section id="about" class="about-section">
+        <div class="about-inner about-text-only">
+            <div class="about-copy">
+                <p class="section-number">06</p>
+                <h2>About the Artist</h2>
+                <p>Gary Penca is an artist whose work reflects a fascination with marine life, the natural world, color, atmosphere, and light.</p>
+                <p>Add Gary's full artist biography here. This can include his background, artistic influences, exhibitions, awards, and the story behind his work.</p>
+            </div>
+        </div>
+    </section>
 
+    <section id="contact" class="contact-section">
+        <div class="contact-inner">
+            <p class="section-number">07</p>
+            <h2>Contact the Studio</h2>
+            <p>For questions about available artwork, commissions, exhibitions, or purchasing a piece, please get in touch.</p>
+            <a href="mailto:studio@example.com" class="contact-button">studio@example.com</a>
+        </div>
+    </section>
 
-    <!-- =========================
-         FOOTER
-    ========================== -->
     <footer>
-
-        <p>
-            © Gary Penca Studio
-        </p>
-
+        <p>© Gary Penca Studio</p>
     </footer>
 
-
-
-    <!-- =========================
-         GALLERY JAVASCRIPT
-    ========================== -->
     <script>
-
         document.querySelectorAll(".gallery-wrapper").forEach(wrapper => {
-
             const gallery = wrapper.querySelector(".gallery");
             const leftButton = wrapper.querySelector(".gallery-arrow-left");
             const rightButton = wrapper.querySelector(".gallery-arrow-right");
 
-
-            rightButton.addEventListener("click", () => {
-
+            function scrollOneCard(direction) {
                 const card = gallery.querySelector(".art-card");
-
-                const scrollAmount =
-                    card.offsetWidth +
-                    parseInt(getComputedStyle(gallery).gap);
-
+                if (!card) return;
+                const gap = parseFloat(getComputedStyle(gallery).gap) || 0;
                 gallery.scrollBy({
-                    left: scrollAmount,
+                    left: direction * (card.offsetWidth + gap),
                     behavior: "smooth"
                 });
+            }
 
-            });
-
-
-            leftButton.addEventListener("click", () => {
-
-                const card = gallery.querySelector(".art-card");
-
-                const scrollAmount =
-                    card.offsetWidth +
-                    parseInt(getComputedStyle(gallery).gap);
-
-                gallery.scrollBy({
-                    left: -scrollAmount,
-                    behavior: "smooth"
-                });
-
-            });
-
+            rightButton.addEventListener("click", () => scrollOneCard(1));
+            leftButton.addEventListener("click", () => scrollOneCard(-1));
         });
-
     </script>
-
 
 </body>
 </html>
