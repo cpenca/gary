@@ -1,6 +1,16 @@
-/* =========================================
-   BASIC RESET
-========================================= */
+/* Gary Penca Studio */
+
+:root {
+    --navy: #14364a;
+    --navy-dark: #0d2838;
+    --cream: #f6f3ed;
+    --cream-alt: #ebe7df;
+    --white: #ffffff;
+    --gold: #aa8957;
+    --text: #252525;
+    --muted: #66635f;
+    --header-height: 78px;
+}
 
 * {
     box-sizing: border-box;
@@ -14,263 +24,216 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #f7f5f0;
-    color: #242424;
+    background: var(--cream);
+    color: var(--text);
     line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+body.lightbox-open {
+    overflow: hidden;
 }
 
 img {
     display: block;
-    width: 100%;
+    max-width: 100%;
 }
 
+a {
+    color: inherit;
+}
 
-/* =========================================
-   COLORS
-
-   Navy:      #163348
-   Cream:     #f7f5f0
-   White:     #ffffff
-   Gold:      #b59058
-   Text:      #242424
-========================================= */
-
-
-
-/* =========================================
-   HEADER
-========================================= */
-
+/* Header / navigation */
 .site-header {
     position: sticky;
     top: 0;
     z-index: 1000;
-
     background: rgba(255, 255, 255, 0.96);
-    border-bottom: 1px solid #ddd;
-    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(20, 54, 74, 0.12);
+    backdrop-filter: blur(10px);
 }
 
 .header-inner {
-    max-width: 1400px;
-    margin: auto;
-
-    min-height: 76px;
-
+    max-width: 1580px;
+    min-height: var(--header-height);
+    margin: 0 auto;
+    padding: 0 4%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    padding: 0 5%;
+    gap: 28px;
 }
 
 .logo {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.45rem;
-    color: #163348;
+    flex: 0 0 auto;
+    color: var(--navy);
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
     text-decoration: none;
-    font-weight: bold;
 }
 
 .main-nav {
     display: flex;
-    gap: 28px;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 17px;
 }
 
 .main-nav a {
-    color: #333;
+    position: relative;
+    color: #343434;
+    font-size: 0.74rem;
+    font-weight: 600;
+    letter-spacing: 0.065em;
+    line-height: 1.2;
     text-decoration: none;
-
-    font-size: 0.88rem;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
-
-    transition: color 0.2s ease;
+    white-space: nowrap;
 }
 
-.main-nav a:hover {
-    color: #b59058;
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: -7px;
+    height: 1px;
+    background: var(--gold);
+    transition: right 180ms ease;
 }
 
+.main-nav a:hover::after,
+.main-nav a:focus-visible::after {
+    right: 0;
+}
 
+.nav-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
 
-/* =========================================
-   HERO
-========================================= */
+.nav-toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin: 5px 0;
+    background: var(--navy);
+}
 
+/* Hero */
 .hero {
     min-height: 78vh;
-
+    padding: 90px 24px;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    text-align: center;
-
-    position: relative;
-
-    padding: 80px 20px;
-
-    /*
-       Replace this with one of Gary's paintings
-       when you have the final images.
-    */
-
-    background:
-        linear-gradient(
-            rgba(9, 33, 48, 0.55),
-            rgba(9, 33, 48, 0.62)
-        ),
-        url("images/hero.jpg");
-
-    background-size: cover;
     background-position: center;
+    background-size: cover;
+    color: white;
+    text-align: center;
 }
 
 .hero-content {
-    position: relative;
-    color: white;
-    max-width: 780px;
+    width: min(820px, 100%);
+    padding: 28px;
 }
 
 .eyebrow {
-    text-transform: uppercase;
-    letter-spacing: 0.25em;
+    margin-bottom: 14px;
     font-size: 0.75rem;
-
-    margin-bottom: 16px;
+    font-weight: 700;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
 }
 
 .hero h1 {
-    font-family: Georgia, "Times New Roman", serif;
-
+    margin-bottom: 24px;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: clamp(3rem, 7vw, 6rem);
-
-    line-height: 1;
-    font-weight: normal;
-
-    margin-bottom: 25px;
+    font-weight: 300;
+    letter-spacing: -0.035em;
+    line-height: 0.98;
 }
 
 .hero-description {
-    max-width: 600px;
+    width: min(650px, 100%);
     margin: 0 auto 34px;
-
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.25rem;
+    font-size: clamp(1.05rem, 2vw, 1.3rem);
+    line-height: 1.55;
 }
 
-.hero-button {
+.hero-button,
+.contact-button {
     display: inline-block;
-
-    border: 1px solid white;
-
-    padding: 13px 27px;
-
-    text-decoration: none;
-
-    color: white;
-
-    text-transform: uppercase;
+    padding: 13px 26px;
+    border: 1px solid currentColor;
+    font-size: 0.78rem;
+    font-weight: 700;
     letter-spacing: 0.12em;
-    font-size: 0.8rem;
-
-    transition:
-        background 0.25s ease,
-        color 0.25s ease;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background 180ms ease, color 180ms ease;
 }
 
-.hero-button:hover {
+.hero-button:hover,
+.hero-button:focus-visible {
     background: white;
-    color: #163348;
+    color: var(--navy);
 }
 
-
-
-/* =========================================
-   ART SECTIONS
-========================================= */
-
+/* Artwork sections */
 .art-section {
-    padding: 110px 6%;
-    scroll-margin-top: 75px;
+    padding: 100px 5%;
+    scroll-margin-top: calc(var(--header-height) + 12px);
 }
 
 .alternate-section {
-    background: #ebe8e1;
+    background: var(--cream-alt);
 }
 
 .section-intro {
-    max-width: 760px;
-    margin: 0 auto 55px;
-
+    width: min(760px, 100%);
+    margin: 0 auto 48px;
     text-align: center;
 }
 
-.section-number {
-    color: #b59058;
-
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-
-    font-size: 0.75rem;
-
-    margin-bottom: 8px;
-}
-
 .section-intro h2,
-.about-copy h2,
+.about-inner h2,
 .contact-inner h2 {
-    font-family: Georgia, "Times New Roman", serif;
-
-    color: #163348;
-
-    font-size: clamp(2.5rem, 5vw, 4.4rem);
-
-    font-weight: normal;
-
-    line-height: 1.1;
-
-    margin-bottom: 23px;
+    margin-bottom: 20px;
+    color: var(--navy);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(2.35rem, 4.5vw, 4.2rem);
+    font-weight: 300;
+    letter-spacing: -0.035em;
+    line-height: 1.05;
 }
 
 .section-intro p {
-    color: #555;
-    font-size: 1.05rem;
+    color: var(--muted);
+    font-size: 1.02rem;
 }
 
-
-
-/* =========================================
-   GALLERY
-========================================= */
-
+/* Horizontal gallery */
 .gallery-wrapper {
-    max-width: 1400px;
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns:
-        45px
-        minmax(0, 1fr)
-        45px;
-
-    align-items: center;
-
-    gap: 15px;
+    position: relative;
+    width: min(1450px, 100%);
+    margin: 0 auto;
 }
 
 .gallery {
     display: flex;
-
-    gap: 25px;
-
+    gap: 24px;
     overflow-x: auto;
-
+    overscroll-behavior-x: contain;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
-
     scrollbar-width: none;
 }
 
@@ -278,424 +241,411 @@ img {
     display: none;
 }
 
-
-
-/*
-Each image occupies one third of
-the available gallery width.
-*/
-
 .art-card {
-    flex:
-        0 0
-        calc((100% - 50px) / 3);
-
+    flex: 0 0 calc((100% - 48px) / 3);
+    min-width: 0;
     scroll-snap-align: start;
 }
 
-.art-card img {
+.art-image-button {
     width: 100%;
-    height: 410px;
-
-    object-fit: cover;
-
-    background: #ddd;
-
-    transition:
-        transform 0.3s ease,
-        opacity 0.3s ease;
+    height: 430px;
+    padding: 16px;
+    border: 0;
+    background: rgba(255, 255, 255, 0.58);
+    cursor: zoom-in;
 }
 
-.art-card:hover img {
-    opacity: 0.94;
+.art-image-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 180ms ease, opacity 180ms ease;
+}
+
+.art-image-button:hover img,
+.art-image-button:focus-visible img {
+    transform: scale(1.012);
+    opacity: 0.96;
+}
+
+.art-image-button:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
 }
 
 .art-card figcaption {
-    padding-top: 14px;
-
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
+    padding: 14px 6px 0;
+    color: var(--navy);
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
 }
-
-.art-card figcaption span {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.05rem;
-
-    color: #163348;
-}
-
-.art-card figcaption small {
-    color: #777;
-    font-style: italic;
-}
-
-
-
-/* =========================================
-   GALLERY ARROWS
-========================================= */
 
 .gallery-arrow {
-    width: 44px;
-    height: 44px;
-
+    position: absolute;
+    top: 205px;
+    z-index: 5;
+    width: 46px;
+    height: 46px;
+    border: 1px solid var(--navy);
     border-radius: 50%;
-
-    border: 1px solid #163348;
-
-    background: transparent;
-    color: #163348;
-
-    font-size: 1.2rem;
-
+    background: rgba(255, 255, 255, 0.94);
+    color: var(--navy);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
     cursor: pointer;
-
-    transition:
-        background 0.2s ease,
-        color 0.2s ease;
+    font-size: 1.15rem;
+    transform: translateY(-50%);
+    transition: background 180ms ease, color 180ms ease, transform 180ms ease;
 }
 
-.gallery-arrow:hover {
-    background: #163348;
+.gallery-arrow:hover,
+.gallery-arrow:focus-visible {
+    background: var(--navy);
     color: white;
+}
+
+.gallery-arrow-left {
+    left: -22px;
+}
+
+.gallery-arrow-right {
+    right: -22px;
 }
 
 .swipe-hint {
     display: none;
-
-    text-align: center;
-    color: #777;
-
-    font-size: 0.75rem;
-    text-transform: uppercase;
+    margin-top: 18px;
+    color: #77736d;
+    font-size: 0.73rem;
+    font-weight: 700;
     letter-spacing: 0.1em;
-
-    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
 }
 
-
-
-/* =========================================
-   ABOUT
-========================================= */
+/* About / contact */
+.about-section,
+.contact-section {
+    scroll-margin-top: calc(var(--header-height) + 12px);
+}
 
 .about-section {
-    background: #163348;
+    padding: 110px 6%;
+    background: var(--navy);
     color: white;
-
-    padding: 120px 6%;
-
-    scroll-margin-top: 75px;
 }
 
 .about-inner {
-    max-width: 1200px;
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns:
-        minmax(300px, 0.9fr)
-        minmax(300px, 1.1fr);
-
-    gap: 80px;
-
-    align-items: center;
+    width: min(760px, 100%);
+    margin: 0 auto;
+    text-align: center;
 }
 
-.about-image img {
-    height: 570px;
-    object-fit: cover;
-}
-
-.about-copy {
-    max-width: 600px;
-}
-
-.about-copy h2 {
+.about-inner h2 {
     color: white;
 }
 
-.about-copy p:not(.section-number) {
-    color: #d9e0e4;
-    margin-bottom: 22px;
-
+.about-inner p {
+    margin: 0 auto 20px;
+    color: #dfe6e9;
     font-size: 1.05rem;
 }
 
-
-
-/* =========================================
-   CONTACT
-========================================= */
-
 .contact-section {
-    padding: 120px 6%;
-
-    text-align: center;
-
+    padding: 110px 6%;
     background: white;
-
-    scroll-margin-top: 75px;
+    text-align: center;
 }
 
 .contact-inner {
-    max-width: 700px;
-    margin: auto;
+    width: min(700px, 100%);
+    margin: 0 auto;
 }
 
 .contact-inner p {
     margin-bottom: 30px;
-    color: #555;
+    color: var(--muted);
 }
 
 .contact-button {
-    display: inline-block;
-
-    padding: 15px 28px;
-
-    border: 1px solid #163348;
-
-    color: #163348;
-
-    text-decoration: none;
-
-    transition:
-        background 0.25s ease,
-        color 0.25s ease;
+    color: var(--navy);
 }
 
-.contact-button:hover {
-    background: #163348;
+.contact-button:hover,
+.contact-button:focus-visible {
+    background: var(--navy);
     color: white;
 }
 
-
-
-/* =========================================
-   FOOTER
-========================================= */
-
 footer {
-    background: #102736;
-    color: #aebac1;
-
-    text-align: center;
-
-    padding: 30px;
-
+    padding: 30px 20px;
+    background: var(--navy-dark);
+    color: #b8c4ca;
     font-size: 0.8rem;
+    text-align: center;
 }
 
-
-
-/* =========================================
-   TABLET
-========================================= */
-
-@media (max-width: 950px) {
-
-    .main-nav {
-        gap: 16px;
-    }
-
-    .main-nav a {
-        font-size: 0.72rem;
-    }
-
-    .art-card {
-        flex:
-            0 0
-            calc((100% - 25px) / 2);
-    }
-
-    .about-inner {
-        gap: 45px;
-    }
-
+/* Artwork lightbox */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    background: rgba(5, 16, 23, 0.9);
 }
 
+.lightbox.is-open {
+    display: flex;
+}
 
+.lightbox-content {
+    max-width: min(1200px, 92vw);
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
 
-/* =========================================
-   MOBILE
-========================================= */
+.lightbox-content img {
+    max-width: 92vw;
+    max-height: 82vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.35);
+}
 
-@media (max-width: 700px) {
+.lightbox-content p {
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-align: center;
+}
 
-    .site-header {
-        position: relative;
-    }
+.lightbox-close {
+    position: fixed;
+    top: 18px;
+    right: 22px;
+    width: 46px;
+    height: 46px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.25);
+    color: white;
+    cursor: pointer;
+    font-size: 2rem;
+    line-height: 1;
+}
 
+/* Tablet / compact navigation */
+@media (max-width: 1120px) {
     .header-inner {
-        flex-direction: column;
-
-        gap: 15px;
-
-        padding: 18px 20px;
-    }
-
-    .main-nav {
-        width: 100%;
-
-        justify-content: center;
-
-        flex-wrap: wrap;
-
-        gap: 8px 17px;
-    }
-
-    .main-nav a {
-        font-size: 0.7rem;
-    }
-
-
-    .hero {
-        min-height: 70vh;
-    }
-
-
-    .art-section {
-        padding:
-            80px
-            15px;
-    }
-
-
-    .gallery-wrapper {
-        /*
-        Give the arrows their own
-        narrow columns on mobile.
-        */
-
-        grid-template-columns:
-            38px
-            minmax(0, 1fr)
-            38px;
-
-        gap: 6px;
-    }
-
-
-    .gallery {
-        /*
-        A smaller gap allows part of
-        the next image to peek into view.
-        */
-
-        gap: 14px;
-    }
-
-
-    .art-card {
-
-        /*
-        91% makes one image dominant,
-        while leaving a visible piece
-        of the next artwork.
-        */
-
-        flex:
-            0 0
-            91%;
-    }
-
-
-    .art-card img {
-        height: 420px;
-    }
-
-
-    .gallery-arrow {
-        width: 36px;
-        height: 36px;
-
-        font-size: 1rem;
-    }
-
-
-    .swipe-hint {
-        display: block;
-    }
-
-
-    .about-inner {
-        grid-template-columns: 1fr;
-    }
-
-
-    .about-image img {
-        height: auto;
-        max-height: 560px;
-    }
-
-
-    .about-section {
-        padding: 80px 25px;
-    }
-
-}
-
-
-
-/* =========================================
-   SMALL PHONES
-========================================= */
-
-@media (max-width: 450px) {
-
-    .logo {
-        font-size: 1.25rem;
-    }
-
-    .hero h1 {
-        font-size: 3rem;
-    }
-
-    .gallery-wrapper {
-        /*
-        Put arrows over the image instead
-        of consuming too much screen width.
-        */
-
-        display: block;
         position: relative;
     }
 
-    .gallery {
-        padding: 0 24px;
-        scroll-padding-left: 24px;
+    .nav-toggle {
+        display: block;
+        margin-left: auto;
     }
 
-    .art-card {
-        flex: 0 0 92%;
-    }
-
-    .gallery-arrow {
+    .main-nav {
         position: absolute;
-
-        top: 43%;
-
-        z-index: 10;
-
-        background: rgba(255, 255, 255, 0.92);
-
-        box-shadow:
-            0 2px 10px
-            rgba(0, 0, 0, 0.15);
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+        max-height: calc(100vh - var(--header-height));
+        padding: 12px 5% 22px;
+        overflow-y: auto;
+        background: rgba(255, 255, 255, 0.99);
+        border-bottom: 1px solid rgba(20, 54, 74, 0.12);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
     }
 
-    .gallery-arrow-left {
-        left: 2px;
+    .main-nav.is-open {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0;
     }
 
-    .gallery-arrow-right {
-        right: 2px;
+    .main-nav a {
+        padding: 13px 10px;
+        border-bottom: 1px solid #eeeae4;
+        font-size: 0.76rem;
+        text-align: center;
     }
 
-    .art-card img {
+    .main-nav a::after {
+        display: none;
+    }
+
+    .art-image-button {
         height: 390px;
     }
 
+    .gallery-arrow {
+        top: 185px;
+    }
+}
+
+/* Mobile: one centered image per view, swipeable */
+@media (max-width: 700px) {
+    :root {
+        --header-height: 68px;
+    }
+
+    .header-inner {
+        min-height: var(--header-height);
+        padding: 0 18px;
+    }
+
+    .logo {
+        font-size: 1.13rem;
+    }
+
+    .main-nav.is-open {
+        grid-template-columns: 1fr;
+        padding: 6px 18px 16px;
+    }
+
+    .main-nav a {
+        padding: 11px 8px;
+    }
+
+    .hero {
+        min-height: 70vh;
+        padding: 74px 18px;
+        background-position: center;
+    }
+
+    .hero-content {
+        padding: 10px;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.8rem, 13vw, 4.2rem);
+    }
+
+    .hero-description {
+        font-size: 1.05rem;
+    }
+
+    .art-section {
+        padding: 72px 0 78px;
+    }
+
+    .section-intro {
+        margin-bottom: 34px;
+        padding: 0 22px;
+    }
+
+    .section-intro h2,
+    .about-inner h2,
+    .contact-inner h2 {
+        font-size: clamp(2.3rem, 11vw, 3.4rem);
+    }
+
+    .section-intro p {
+        font-size: 0.98rem;
+    }
+
+    .gallery-wrapper {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .gallery {
+        gap: 16px;
+        padding: 0 13vw;
+        scroll-padding-inline: 13vw;
+        scroll-snap-type: x mandatory;
+    }
+
+    .art-card {
+        flex: 0 0 74vw;
+        max-width: 430px;
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
+    }
+
+    .art-image-button {
+        height: clamp(300px, 52vh, 450px);
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.66);
+    }
+
+    .art-card figcaption {
+        padding-top: 12px;
+        font-size: 0.96rem;
+    }
+
+    .gallery-arrow {
+        top: calc(clamp(300px, 52vh, 450px) / 2);
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.94);
+    }
+
+    .gallery-arrow-left {
+        left: 8px;
+    }
+
+    .gallery-arrow-right {
+        right: 8px;
+    }
+
+    .swipe-hint {
+        display: block;
+        padding: 0 20px;
+    }
+
+    .about-section,
+    .contact-section {
+        padding: 82px 24px;
+    }
+
+    .lightbox {
+        padding: 18px;
+    }
+
+    .lightbox-content img {
+        max-width: 94vw;
+        max-height: 78vh;
+    }
+
+    .lightbox-close {
+        top: 12px;
+        right: 12px;
+    }
+}
+
+@media (max-width: 420px) {
+    .gallery {
+        padding: 0 11vw;
+        scroll-padding-inline: 11vw;
+    }
+
+    .art-card {
+        flex-basis: 78vw;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html,
+    .gallery {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
 }
