@@ -6,6 +6,40 @@
     <meta name="description" content="Gary Penca Studio — pastels, marine art and other original works inspired by the natural world.">
     <title>Gary Penca Studio</title>
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Highlight the navigation item for the section currently in view. */
+        .main-nav a {
+            position: relative;
+            transition: color 0.2s ease, background-color 0.2s ease;
+        }
+
+        .main-nav a.is-active {
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.14);
+            border-radius: 999px;
+        }
+
+        .main-nav a.is-active::after {
+            content: "";
+            position: absolute;
+            left: 18%;
+            right: 18%;
+            bottom: -6px;
+            height: 2px;
+            border-radius: 999px;
+            background: currentColor;
+        }
+
+        @media (max-width: 900px) {
+            .main-nav a.is-active::after {
+                left: 0;
+                right: auto;
+                width: 34px;
+                bottom: 2px;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -437,6 +471,62 @@
         document.addEventListener('keydown', event => {
             if (event.key === 'Escape' && lightbox.classList.contains('is-open')) closeLightbox();
         });
+
+
+        // Highlight the nav link that matches the section currently in view.
+        const sectionNavLinks = Array.from(
+            document.querySelectorAll('.main-nav a[href^="#"]')
+        );
+
+        const sections = sectionNavLinks
+            .map(link => document.querySelector(link.getAttribute('href')))
+            .filter(Boolean);
+
+        function setActiveNav(sectionId) {
+            sectionNavLinks.forEach(link => {
+                const isActive = link.getAttribute('href') === `#${sectionId}`;
+                link.classList.toggle('is-active', isActive);
+
+                if (isActive) {
+                    link.setAttribute('aria-current', 'location');
+                } else {
+                    link.removeAttribute('aria-current');
+                }
+            });
+        }
+
+        sectionNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                const targetId = link.getAttribute('href').slice(1);
+                setActiveNav(targetId);
+            });
+        });
+
+        const sectionObserver = new IntersectionObserver(
+            entries => {
+                const visibleSections = entries
+                    .filter(entry => entry.isIntersecting)
+                    .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+                if (visibleSections.length) {
+                    setActiveNav(visibleSections[0].target.id);
+                }
+            },
+            {
+                rootMargin: '-30% 0px -55% 0px',
+                threshold: [0, 0.1, 0.25, 0.5, 0.75]
+            }
+        );
+
+        sections.forEach(section => sectionObserver.observe(section));
+
+        // Set the correct state on first load.
+        if (window.location.hash) {
+            const initialSection = document.querySelector(window.location.hash);
+            if (initialSection) setActiveNav(initialSection.id);
+        } else if (sections.length) {
+            setActiveNav(sections[0].id);
+        }
 
         // Compact navigation on phones and smaller tablets.
         const navToggle = document.querySelector('.nav-toggle');
