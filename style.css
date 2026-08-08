@@ -1,0 +1,701 @@
+/* =========================================
+   BASIC RESET
+========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f5f0;
+    color: #242424;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+
+/* =========================================
+   COLORS
+
+   Navy:      #163348
+   Cream:     #f7f5f0
+   White:     #ffffff
+   Gold:      #b59058
+   Text:      #242424
+========================================= */
+
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid #ddd;
+    backdrop-filter: blur(8px);
+}
+
+.header-inner {
+    max-width: 1400px;
+    margin: auto;
+
+    min-height: 76px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 5%;
+}
+
+.logo {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.45rem;
+    color: #163348;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.main-nav {
+    display: flex;
+    gap: 28px;
+}
+
+.main-nav a {
+    color: #333;
+    text-decoration: none;
+
+    font-size: 0.88rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+
+    transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+    color: #b59058;
+}
+
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 78vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+
+    padding: 80px 20px;
+
+    /*
+       Replace this with one of Gary's paintings
+       when you have the final images.
+    */
+
+    background:
+        linear-gradient(
+            rgba(9, 33, 48, 0.55),
+            rgba(9, 33, 48, 0.62)
+        ),
+        url("images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    position: relative;
+    color: white;
+    max-width: 780px;
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    font-size: 0.75rem;
+
+    margin-bottom: 16px;
+}
+
+.hero h1 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(3rem, 7vw, 6rem);
+
+    line-height: 1;
+    font-weight: normal;
+
+    margin-bottom: 25px;
+}
+
+.hero-description {
+    max-width: 600px;
+    margin: 0 auto 34px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.25rem;
+}
+
+.hero-button {
+    display: inline-block;
+
+    border: 1px solid white;
+
+    padding: 13px 27px;
+
+    text-decoration: none;
+
+    color: white;
+
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.8rem;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+.hero-button:hover {
+    background: white;
+    color: #163348;
+}
+
+
+
+/* =========================================
+   ART SECTIONS
+========================================= */
+
+.art-section {
+    padding: 110px 6%;
+    scroll-margin-top: 75px;
+}
+
+.alternate-section {
+    background: #ebe8e1;
+}
+
+.section-intro {
+    max-width: 760px;
+    margin: 0 auto 55px;
+
+    text-align: center;
+}
+
+.section-number {
+    color: #b59058;
+
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+
+    font-size: 0.75rem;
+
+    margin-bottom: 8px;
+}
+
+.section-intro h2,
+.about-copy h2,
+.contact-inner h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    color: #163348;
+
+    font-size: clamp(2.5rem, 5vw, 4.4rem);
+
+    font-weight: normal;
+
+    line-height: 1.1;
+
+    margin-bottom: 23px;
+}
+
+.section-intro p {
+    color: #555;
+    font-size: 1.05rem;
+}
+
+
+
+/* =========================================
+   GALLERY
+========================================= */
+
+.gallery-wrapper {
+    max-width: 1400px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        45px
+        minmax(0, 1fr)
+        45px;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.gallery {
+    display: flex;
+
+    gap: 25px;
+
+    overflow-x: auto;
+
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+
+    scrollbar-width: none;
+}
+
+.gallery::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+/*
+Each image occupies one third of
+the available gallery width.
+*/
+
+.art-card {
+    flex:
+        0 0
+        calc((100% - 50px) / 3);
+
+    scroll-snap-align: start;
+}
+
+.art-card img {
+    width: 100%;
+    height: 410px;
+
+    object-fit: cover;
+
+    background: #ddd;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+.art-card:hover img {
+    opacity: 0.94;
+}
+
+.art-card figcaption {
+    padding-top: 14px;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.art-card figcaption span {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.05rem;
+
+    color: #163348;
+}
+
+.art-card figcaption small {
+    color: #777;
+    font-style: italic;
+}
+
+
+
+/* =========================================
+   GALLERY ARROWS
+========================================= */
+
+.gallery-arrow {
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+
+    border: 1px solid #163348;
+
+    background: transparent;
+    color: #163348;
+
+    font-size: 1.2rem;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.gallery-arrow:hover {
+    background: #163348;
+    color: white;
+}
+
+.swipe-hint {
+    display: none;
+
+    text-align: center;
+    color: #777;
+
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+    margin-top: 20px;
+}
+
+
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.about-section {
+    background: #163348;
+    color: white;
+
+    padding: 120px 6%;
+
+    scroll-margin-top: 75px;
+}
+
+.about-inner {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(300px, 0.9fr)
+        minmax(300px, 1.1fr);
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.about-image img {
+    height: 570px;
+    object-fit: cover;
+}
+
+.about-copy {
+    max-width: 600px;
+}
+
+.about-copy h2 {
+    color: white;
+}
+
+.about-copy p:not(.section-number) {
+    color: #d9e0e4;
+    margin-bottom: 22px;
+
+    font-size: 1.05rem;
+}
+
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact-section {
+    padding: 120px 6%;
+
+    text-align: center;
+
+    background: white;
+
+    scroll-margin-top: 75px;
+}
+
+.contact-inner {
+    max-width: 700px;
+    margin: auto;
+}
+
+.contact-inner p {
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.contact-button {
+    display: inline-block;
+
+    padding: 15px 28px;
+
+    border: 1px solid #163348;
+
+    color: #163348;
+
+    text-decoration: none;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+.contact-button:hover {
+    background: #163348;
+    color: white;
+}
+
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    background: #102736;
+    color: #aebac1;
+
+    text-align: center;
+
+    padding: 30px;
+
+    font-size: 0.8rem;
+}
+
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 950px) {
+
+    .main-nav {
+        gap: 16px;
+    }
+
+    .main-nav a {
+        font-size: 0.72rem;
+    }
+
+    .art-card {
+        flex:
+            0 0
+            calc((100% - 25px) / 2);
+    }
+
+    .about-inner {
+        gap: 45px;
+    }
+
+}
+
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .site-header {
+        position: relative;
+    }
+
+    .header-inner {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 18px 20px;
+    }
+
+    .main-nav {
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 8px 17px;
+    }
+
+    .main-nav a {
+        font-size: 0.7rem;
+    }
+
+
+    .hero {
+        min-height: 70vh;
+    }
+
+
+    .art-section {
+        padding:
+            80px
+            15px;
+    }
+
+
+    .gallery-wrapper {
+        /*
+        Give the arrows their own
+        narrow columns on mobile.
+        */
+
+        grid-template-columns:
+            38px
+            minmax(0, 1fr)
+            38px;
+
+        gap: 6px;
+    }
+
+
+    .gallery {
+        /*
+        A smaller gap allows part of
+        the next image to peek into view.
+        */
+
+        gap: 14px;
+    }
+
+
+    .art-card {
+
+        /*
+        91% makes one image dominant,
+        while leaving a visible piece
+        of the next artwork.
+        */
+
+        flex:
+            0 0
+            91%;
+    }
+
+
+    .art-card img {
+        height: 420px;
+    }
+
+
+    .gallery-arrow {
+        width: 36px;
+        height: 36px;
+
+        font-size: 1rem;
+    }
+
+
+    .swipe-hint {
+        display: block;
+    }
+
+
+    .about-inner {
+        grid-template-columns: 1fr;
+    }
+
+
+    .about-image img {
+        height: auto;
+        max-height: 560px;
+    }
+
+
+    .about-section {
+        padding: 80px 25px;
+    }
+
+}
+
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 450px) {
+
+    .logo {
+        font-size: 1.25rem;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .gallery-wrapper {
+        /*
+        Put arrows over the image instead
+        of consuming too much screen width.
+        */
+
+        display: block;
+        position: relative;
+    }
+
+    .gallery {
+        padding: 0 24px;
+        scroll-padding-left: 24px;
+    }
+
+    .art-card {
+        flex: 0 0 92%;
+    }
+
+    .gallery-arrow {
+        position: absolute;
+
+        top: 43%;
+
+        z-index: 10;
+
+        background: rgba(255, 255, 255, 0.92);
+
+        box-shadow:
+            0 2px 10px
+            rgba(0, 0, 0, 0.15);
+    }
+
+    .gallery-arrow-left {
+        left: 2px;
+    }
+
+    .gallery-arrow-right {
+        right: 2px;
+    }
+
+    .art-card img {
+        height: 390px;
+    }
+
+}
