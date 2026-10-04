@@ -31,7 +31,120 @@
             background: currentColor;
         }
 
+        /* Dive Videos: styled to feel like the artwork sections while keeping each item a direct YouTube link. */
+        .video-grid {
+            width: min(1180px, calc(100% - 48px));
+            margin: 38px auto 0;
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .video-card {
+            margin: 0;
+            border-radius: 18px;
+            overflow: hidden;
+            background: #ffffff;
+            box-shadow: 0 12px 32px rgba(8, 29, 42, 0.10);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 38px rgba(8, 29, 42, 0.16);
+        }
+
+        .video-thumbnail-link {
+            position: relative;
+            display: block;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            background: #081d2a;
+        }
+
+        .video-thumbnail-link img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .video-card:hover .video-thumbnail-link img {
+            transform: scale(1.035);
+        }
+
+        .video-play {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 58px;
+            height: 58px;
+            transform: translate(-50%, -50%);
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            background: rgba(8, 29, 42, 0.86);
+            color: #ffffff;
+            font-size: 22px;
+            line-height: 1;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.24);
+        }
+
+        .video-card-body {
+            padding: 20px 20px 22px;
+            text-align: center;
+        }
+
+        .video-card h3 {
+            margin: 0 0 10px;
+            font-size: 1.18rem;
+        }
+
+        .video-card h3 a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .video-card h3 a:hover,
+        .video-card h3 a:focus-visible {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        .video-details {
+            margin: 0;
+            font-size: 0.94rem;
+            line-height: 1.65;
+            opacity: 0.82;
+        }
+
+        .video-watch-link {
+            display: inline-block;
+            margin-top: 14px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .video-watch-link:hover,
+        .video-watch-link:focus-visible {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        @media (max-width: 1050px) {
+            .video-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
         @media (max-width: 900px) {
+            .video-grid {
+                width: min(100% - 32px, 620px);
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
             .main-nav a.is-active::after {
                 left: 0;
                 right: auto;
@@ -58,6 +171,7 @@
                 <a href="#reefscapes">Reefscapes</a>
                 <a href="#conceptual-art">Conceptual Art</a>
                 <a href="#under-the-pier">Under the Pier</a>
+                <a href="#dive-videos">Dive Videos</a>
                 <a href="https://www.garypencastudio.com/shop-1" target="_blank" rel="noopener noreferrer">Shop</a>
                 <a href="#about">About Me</a>
                 <a href="#contact">Contact</a>
@@ -381,6 +495,111 @@
         </div>
 
         <p class="swipe-hint">Swipe or use the arrows to see more artwork</p>
+    </section>
+
+    <section id="dive-videos" class="art-section">
+        <div class="section-intro">
+            <h2>Dive Videos</h2>
+            <p>Underwater dive movies and canal-camera clips from my time in and around South Florida waters. Select any video to watch it on YouTube.</p>
+        </div>
+
+        <div class="video-grid" aria-label="Dive videos">
+            <article class="video-card">
+                <a class="video-thumbnail-link" href="https://youtu.be/097-trPwZuY" target="_blank" rel="noopener noreferrer" aria-label="Watch Canal Cam 1 on YouTube">
+                    <img src="https://img.youtube.com/vi/097-trPwZuY/hqdefault.jpg" alt="Canal Cam 1 video thumbnail" loading="lazy" decoding="async">
+                    <span class="video-play" aria-hidden="true">&#9654;</span>
+                </a>
+                <div class="video-card-body">
+                    <h3><a href="https://youtu.be/097-trPwZuY" target="_blank" rel="noopener noreferrer">Canal Cam 1</a></h3>
+                    <p class="video-details">Mayan Cichlids</p>
+                    <a class="video-watch-link" href="https://youtu.be/097-trPwZuY" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+                </div>
+            </article>
+
+            <article class="video-card">
+                <a class="video-thumbnail-link" href="https://youtu.be/YhhX7ubAOBA" target="_blank" rel="noopener noreferrer" aria-label="Watch Dive Movie 1 on YouTube">
+                    <img src="https://img.youtube.com/vi/YhhX7ubAOBA/hqdefault.jpg" alt="Dive Movie 1 video thumbnail" loading="lazy" decoding="async">
+                    <span class="video-play" aria-hidden="true">&#9654;</span>
+                </a>
+                <div class="video-card-body">
+                    <h3><a href="https://youtu.be/YhhX7ubAOBA" target="_blank" rel="noopener noreferrer">Dive Movie 1</a></h3>
+                    <p class="video-details">Balloonfish &amp; Eel<br>Banded Butterflyfish<br>Flounder<br>Conch<br>Nurse Shark</p>
+                    <a class="video-watch-link" href="https://youtu.be/YhhX7ubAOBA" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+                </div>
+            </article>
+
+            <article class="video-card">
+                <a class="video-thumbnail-link" href="https://youtu.be/hFY1iL_GKD8" target="_blank" rel="noopener noreferrer" aria-label="Watch Dive Movie 3 on YouTube">
+                    <img src="https://img.youtube.com/vi/hFY1iL_GKD8/hqdefault.jpg" alt="Dive Movie 3 video thumbnail" loading="lazy" decoding="async">
+                    <span class="video-play" aria-hidden="true">&#9654;</span>
+                </a>
+                <div class="video-card-body">
+                    <h3><a href="https://youtu.be/hFY1iL_GKD8" target="_blank" rel="noopener noreferrer">Dive Movie 3</a></h3>
+                    <p class="video-details">Barracuda<br>Lobster<br>Trumpetfish<br>Moray &amp; Lobster</p>
+                    <a class="video-watch-link" href="https://youtu.be/hFY1iL_GKD8" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+                </div>
+            </article>
+
+            <article class="video-card">
+                <a class="video-thumbnail-link" href="https://youtu.be/SuhGcAb0-zg" target="_blank" rel="noopener noreferrer" aria-label="Watch Dive Movie 4 on YouTube">
+                    <img src="https://img.youtube.com/vi/SuhGcAb0-zg/hqdefault.jpg" alt="Dive Movie 4 video thumbnail" loading="lazy" decoding="async">
+                    <span class="video-play" aria-hidden="true">&#9654;</span>
+                </a>
+                <div class="video-card-body">
+                    <h3><a href="https://youtu.be/SuhGcAb0-zg" target="_blank" rel="noopener noreferrer">Dive Movie 4</a></h3>
+                    <p class="video-details">Spotfin butterflyfish<br>Smooth Trunkfish<br>Chain Moray<br>Hogfish</p>
+                    <a class="video-watch-link" href="https://youtu.be/SuhGcAb0-zg" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+                </div>
+            </article>
+
+            <article class="video-card">
+                <a class="video-thumbnail-link" href="https://youtu.be/WvRO0MOp2nY" target="_blank" rel="noopener noreferrer" aria-label="Watch Dive Movie 2 on YouTube">
+                    <img src="https://img.youtube.com/vi/WvRO0MOp2nY/hqdefault.jpg" alt="Dive Movie 2 video thumbnail" loading="lazy" decoding="async">
+                    <span class="video-play" aria-hidden="true">&#9654;</span>
+                </a>
+                <div class="video-card-body">
+                    <h3><a href="https://youtu.be/WvRO0MOp2nY" target="_blank" rel="noopener noreferrer">Dive Movie 2</a></h3>
+                    <p class="video-details">Nudibranch<br>Spotfin Butterflyfish<br>Juvee Banded Butterflyfish<br>Moray<br>Tiny Smooth Trunkfish</p>
+                    <a class="video-watch-link" href="https://youtu.be/WvRO0MOp2nY" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+                </div>
+            </article>
+
+            <article class="video-card">
+                <a class="video-thumbnail-link" href="https://youtu.be/Mn-ok9Luvyk" target="_blank" rel="noopener noreferrer" aria-label="Watch Canal Cam 2 on YouTube">
+                    <img src="https://img.youtube.com/vi/Mn-ok9Luvyk/hqdefault.jpg" alt="Canal Cam 2 video thumbnail" loading="lazy" decoding="async">
+                    <span class="video-play" aria-hidden="true">&#9654;</span>
+                </a>
+                <div class="video-card-body">
+                    <h3><a href="https://youtu.be/Mn-ok9Luvyk" target="_blank" rel="noopener noreferrer">Canal Cam 2</a></h3>
+                    <p class="video-details">Peacock bass</p>
+                    <a class="video-watch-link" href="https://youtu.be/Mn-ok9Luvyk" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+                </div>
+            </article>
+
+            <article class="video-card">
+                <a class="video-thumbnail-link" href="https://youtu.be/Hr5FBq-sDoM" target="_blank" rel="noopener noreferrer" aria-label="Watch Dive Movie 5 on YouTube">
+                    <img src="https://img.youtube.com/vi/Hr5FBq-sDoM/hqdefault.jpg" alt="Dive Movie 5 video thumbnail" loading="lazy" decoding="async">
+                    <span class="video-play" aria-hidden="true">&#9654;</span>
+                </a>
+                <div class="video-card-body">
+                    <h3><a href="https://youtu.be/Hr5FBq-sDoM" target="_blank" rel="noopener noreferrer">Dive Movie 5</a></h3>
+                    <p class="video-details">Angler's Pier<br>7-10-23</p>
+                    <a class="video-watch-link" href="https://youtu.be/Hr5FBq-sDoM" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+                </div>
+            </article>
+
+            <article class="video-card">
+                <a class="video-thumbnail-link" href="https://youtu.be/WxBmAE7Y-YY" target="_blank" rel="noopener noreferrer" aria-label="Watch Dive Movie 6 on YouTube">
+                    <img src="https://img.youtube.com/vi/WxBmAE7Y-YY/hqdefault.jpg" alt="Dive Movie 6 video thumbnail" loading="lazy" decoding="async">
+                    <span class="video-play" aria-hidden="true">&#9654;</span>
+                </a>
+                <div class="video-card-body">
+                    <h3><a href="https://youtu.be/WxBmAE7Y-YY" target="_blank" rel="noopener noreferrer">Dive Movie 6</a></h3>
+                    <p class="video-details">Alligator Reef<br>7-29-24</p>
+                    <a class="video-watch-link" href="https://youtu.be/WxBmAE7Y-YY" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+                </div>
+            </article>
+        </div>
     </section>
 
         <section id="about" class="about-section">
