@@ -152,6 +152,11 @@
                 bottom: 2px;
             }
         }
+
+        /* Individual product links for artwork (only where a store listing is confirmed). */
+        .art-shop-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; padding: 0 12px 14px; }
+        .art-shop-link { display: inline-block; padding: 8px 12px; border: 1px solid currentColor; border-radius: 999px; font-size: .82rem; font-weight: 600; text-decoration: none; line-height: 1.3; text-align: center; }
+        .art-shop-link:hover, .art-shop-link:focus-visible { text-decoration: underline; text-underline-offset: 3px; }
     </style>
 </head>
 <body>
@@ -745,7 +750,60 @@
                 console.warn('Gallery list could not load; showing the original artwork.', error);
             }
         }
-        refreshArtworkGalleries();
+        refreshArtworkGalleries().then(refreshArtworkShopLinks);
+
+
+        // Shop URLs live in shop-links.json, separately from gallery-manifest.json.
+        // Works for both the generated galleries and the built-in HTML fallback.
+        function normalizeArtworkTitle(title) {
+            return String(title || '').toLowerCase()
+                .replace(/\b(matted|framed)\b/gi, ' ')
+                .replace(/\b15\s*(?:inches|inch|in)?\b/gi, ' ')
+                .replace(/[”"″]/g, ' ')
+                .replace(/[^a-z0-9]+/g, ' ').trim();
+        }
+        function createShopLink(url, label) {
+            if (typeof url !== 'string' || !/^https:\/\/shop\.garypencastudio\.com\/product-page\//.test(url)) return null;
+            const a = document.createElement('a');
+            a.className = 'art-shop-link';
+            a.href = url;
+            a.target = '_blank';
+            a.rel = 'noopener noreferrer';
+            a.textContent = label;
+            return a;
+        }
+        async function refreshArtworkShopLinks() {
+            try {
+                const response = await fetch('shop-links.json', { cache: 'no-cache' });
+                if (!response.ok) throw new Error(`Shop links unavailable: ${response.status}`);
+                const shopLinks = await response.json();
+                for (const [sectionId, entries] of Object.entries(shopLinks)) {
+                    const gallery = document.querySelector(`#${sectionId} .gallery`);
+                    if (!gallery || !entries) continue;
+                    const byName = new Map(Object.entries(entries).map(([name, value]) => [normalizeArtworkTitle(name), value]));
+                    gallery.querySelectorAll('.art-card').forEach(card => {
+                        card.querySelector('.art-shop-links')?.remove();
+                        const caption = card.querySelector('figcaption')?.textContent;
+                        const entry = byName.get(normalizeArtworkTitle(caption));
+                        if (!entry) return;
+                        const wrapper = document.createElement('div');
+                        wrapper.className = 'art-shop-links';
+                        const printOptions = Array.isArray(entry.prints) ? entry.prints : entry.prints ? [{url: entry.prints, label:'Shop Prints'}] : [];
+                        for (const option of printOptions) {
+                            const link = createShopLink(option.url, option.label || 'Shop Prints');
+                            if (link) wrapper.appendChild(link);
+                        }
+                        if (entry.original) {
+                            const link = createShopLink(entry.original, 'Shop Original');
+                            if (link) wrapper.appendChild(link);
+                        }
+                        if (wrapper.children.length) card.appendChild(wrapper);
+                    });
+                }
+            } catch(error) {
+                console.warn('Shop links unavailable; galleries remain usable.', error);
+            }
+        }
 
         // Highlight the nav link that matches the section currently in view.
         const sectionNavLinks = Array.from(
