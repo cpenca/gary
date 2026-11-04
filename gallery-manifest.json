@@ -1,0 +1,162 @@
+{
+  "botanicals": [
+    {
+      "path": "images/Botanicals/Honeybee .jpg",
+      "caption": "Honeybee"
+    },
+    {
+      "path": "images/Botanicals/Maroon Moth and Yellow Butterfly Orchids.jpg",
+      "caption": "Maroon Moth and Yellow Butterfly Orchids"
+    },
+    {
+      "path": "images/Botanicals/Paradise .jpg",
+      "caption": "Paradise"
+    },
+    {
+      "path": "images/Botanicals/Pond Lilly 5X7.jpg",
+      "caption": "Pond Lilly 5X7"
+    },
+    {
+      "path": "images/Botanicals/Salmon Moth orchid .jpg",
+      "caption": "Salmon Moth orchid"
+    },
+    {
+      "path": "images/Botanicals/White Moth Orchid .jpg",
+      "caption": "White Moth Orchid"
+    }
+  ],
+  "balloons": [
+    {
+      "path": "images/Balloons/Blue and Red Balloon.jpg",
+      "caption": "Blue and Red Balloon"
+    },
+    {
+      "path": "images/Balloons/Blue Balloon.jpg",
+      "caption": "Blue Balloon"
+    },
+    {
+      "path": "images/Balloons/Green Balloon .jpg",
+      "caption": "Green Balloon"
+    },
+    {
+      "path": "images/Balloons/Red Balloon.jpg",
+      "caption": "Red Balloon"
+    },
+    {
+      "path": "images/Balloons/White Balloon.jpg",
+      "caption": "White Balloon"
+    },
+    {
+      "path": "images/Balloons/Yellow Balloon.jpg",
+      "caption": "Yellow Balloon"
+    }
+  ],
+  "fish-out-of-water": [
+    {
+      "path": "images/Fish Out of Water/Balloonfish.jpg",
+      "caption": "Balloonfish"
+    },
+    {
+      "path": "images/Fish Out of Water/Clownfish .jpg",
+      "caption": "Clownfish"
+    },
+    {
+      "path": "images/Fish Out of Water/Conch.jpg",
+      "caption": "Conch"
+    },
+    {
+      "path": "images/Fish Out of Water/Four Eye Butterflyfish.jpg",
+      "caption": "Four Eye Butterflyfish"
+    },
+    {
+      "path": "images/Fish Out of Water/French Angelfish.jpg",
+      "caption": "French Angelfish"
+    },
+    {
+      "path": "images/Fish Out of Water/Moorish Idol .jpg",
+      "caption": "Moorish Idol"
+    },
+    {
+      "path": "images/Fish Out of Water/Queen angelfish.jpg",
+      "caption": "Queen angelfish"
+    },
+    {
+      "path": "images/Fish Out of Water/Smooth Trunkfish .jpg",
+      "caption": "Smooth Trunkfish"
+    },
+    {
+      "path": "images/Fish Out of Water/Spotted Trunkfish.jpg",
+      "caption": "Spotted Trunkfish"
+    },
+    {
+      "path": "images/Fish Out of Water/Yellow Seahorse.jpg",
+      "caption": "Yellow Seahorse"
+    }
+  ],
+  "reefscapes": [
+    {
+      "path": "images/Reefscapes/Ledge .png",
+      "caption": "Ledge"
+    },
+    {
+      "path": "images/Reefscapes/Patch reef matted 15\".png",
+      "caption": "Patch reef matted 15\""
+    },
+    {
+      "path": "images/Reefscapes/Reef Hunter matted 15\".png",
+      "caption": "Reef Hunter matted 15\""
+    }
+  ],
+  "conceptual-art": [
+    {
+      "path": "images/Conceptual Art/Conspiculates 15\".png",
+      "caption": "Conspiculates 15\""
+    },
+    {
+      "path": "images/Conceptual Art/Lionfish 15\".png",
+      "caption": "Lionfish 15\""
+    },
+    {
+      "path": "images/Conceptual Art/No Escape 15\".png",
+      "caption": "No Escape 15\""
+    },
+    {
+      "path": "images/Conceptual Art/Rainbow Butterflyfish 15\".png",
+      "caption": "Rainbow Butterflyfish 15\""
+    },
+    {
+      "path": "images/Conceptual Art/Surreal Shallows 15\".png",
+      "caption": "Surreal Shallows 15\""
+    },
+    {
+      "path": "images/Conceptual Art/The Bubble 15\".png",
+      "caption": "The Bubble 15\""
+    },
+    {
+      "path": "images/Conceptual Art/Visionary  15\".png",
+      "caption": "Visionary  15\""
+    }
+  ],
+  "under-the-pier": [
+    {
+      "path": "images/Under the Pier/Cruising Tarpon matted.png",
+      "caption": "Cruising Tarpon matted"
+    },
+    {
+      "path": "images/Under the Pier/New Arrivals.png",
+      "caption": "New Arrivals"
+    },
+    {
+      "path": "images/Under the Pier/Snook Buffet matted.png",
+      "caption": "Snook Buffet matted"
+    },
+    {
+      "path": "images/Under the Pier/Utopia matted.png",
+      "caption": "Utopia matted"
+    },
+    {
+      "path": "images/Under the Pier/Watchful Eyes matted.png",
+      "caption": "Watchful Eyes matted"
+    }
+  ]
+}
