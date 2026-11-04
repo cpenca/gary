@@ -18,18 +18,16 @@ jobs:
     steps:
       - name: Check out website
         uses: actions/checkout@v4
-        with:
-          persist-credentials: true
+
       - name: Build gallery image list
         run: python3 scripts/build-gallery-manifest.py
-      - name: Commit changes, if any
+
+      - name: Save gallery manifest to GitHub
         run: |
-          if ! git diff --quiet -- gallery-manifest.json || [ ! -f gallery-manifest.json ]; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add gallery-manifest.json
-            if ! git diff --cached --quiet; then
-              git commit -m "Automatically refresh artwork galleries"
-              git push
-            fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add gallery-manifest.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Update artwork galleries"
+            git push
           fi
