@@ -1,1 +1,35 @@
+name: Update artwork galleries
 
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'images/**'
+      - 'scripts/build-gallery-manifest.py'
+      - '.github/workflows/update-galleries.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-manifest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out website
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Build gallery image list
+        run: python3 scripts/build-gallery-manifest.py
+      - name: Commit changes, if any
+        run: |
+          if ! git diff --quiet -- gallery-manifest.json || [ ! -f gallery-manifest.json ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add gallery-manifest.json
+            if ! git diff --cached --quiet; then
+              git commit -m "Automatically refresh artwork galleries"
+              git push
+            fi
+          fi
