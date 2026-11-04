@@ -1,0 +1,200 @@
+{
+  "botanicals": {
+    "White Moth Orchid": {
+      "prints": "https://shop.garypencastudio.com/product-page/white-moth-orchid-gilcee-print",
+      "original": "https://shop.garypencastudio.com/product-page/white-moth-orchid"
+    },
+    "Salmon Moth orchid": {
+      "prints": "https://shop.garypencastudio.com/product-page/salmon-moth-orchid-gilcee-print",
+      "original": "https://shop.garypencastudio.com/product-page/salmon-moth-orchid"
+    },
+    "Maroon Moth and Yellow Butterfly Orchids": {
+      "prints": "https://shop.garypencastudio.com/product-page/maroon-moth-and-yellow-butterfly-orchids-giclee-print"
+    },
+    "Paradise": {
+      "prints": "https://shop.garypencastudio.com/product-page/paradise-giclee-print",
+      "original": "https://shop.garypencastudio.com/product-page/paradise"
+    },
+    "Honeybee": {
+      "prints": "https://shop.garypencastudio.com/product-page/honeybee-giclee-print",
+      "original": "https://shop.garypencastudio.com/product-page/honeybee"
+    }
+  },
+  "balloons": {
+    "Blue Balloon": {
+      "prints": "https://shop.garypencastudio.com/product-page/blue-balloon-giclee-print",
+      "original": "https://shop.garypencastudio.com/product-page/blue-balloon"
+    },
+    "White Balloon": {
+      "prints": "https://shop.garypencastudio.com/product-page/white-balloon-giclee-print",
+      "original": "https://shop.garypencastudio.com/product-page/white-balloon"
+    },
+    "Yellow Balloon": {
+      "prints": "https://shop.garypencastudio.com/product-page/yellow-balloon-giclee-print",
+      "original": "https://shop.garypencastudio.com/product-page/yellow-balloon"
+    },
+    "Red Balloon": {
+      "prints": "https://shop.garypencastudio.com/product-page/red-balloon-giclee-print",
+      "original": "https://shop.garypencastudio.com/product-page/red-balloon"
+    },
+    "Green Balloon": {
+      "prints": "https://shop.garypencastudio.com/product-page/green-balloon-giclee-print",
+      "original": "https://shop.garypencastudio.com/product-page/green-balloon"
+    }
+  },
+  "reefscapes": {
+    "Patch reef": {
+      "prints": "https://shop.garypencastudio.com/product-page/patch-reef-38x27",
+      "original": "https://shop.garypencastudio.com/product-page/patch-reef"
+    },
+    "Reef Hunter": {
+      "prints": "https://shop.garypencastudio.com/product-page/reef-hunter-38x27"
+    },
+    "Ledge": {
+      "prints": "https://shop.garypencastudio.com/product-page/the-ledge-38x27",
+      "original": "https://shop.garypencastudio.com/product-page/the-ledge"
+    }
+  },
+  "conceptual-art": {
+    "No Escape": {
+      "prints": "https://shop.garypencastudio.com/product-page/no-escape"
+    },
+    "Surreal Shallows": {
+      "prints": "https://shop.garypencastudio.com/product-page/surreal-shallows"
+    },
+    "Rainbow Butterflyfish": {
+      "prints": "https://shop.garypencastudio.com/product-page/rainbow-butterflyfish"
+    },
+    "The Bubble": {
+      "prints": "https://shop.garypencastudio.com/product-page/the-bubble"
+    },
+    "Lionfish": {
+      "prints": "https://shop.garypencastudio.com/product-page/lionfish",
+      "original": "https://shop.garypencastudio.com/product-page/lionfish-29-x-39"
+    },
+    "Visionary": {
+      "prints": "https://shop.garypencastudio.com/product-page/visionary",
+      "original": "https://shop.garypencastudio.com/product-page/visionary-13-5-x-18-5"
+    }
+  },
+  "under-the-pier": {
+    "Utopia": {
+      "prints": [
+        {
+          "label": "Print 41 × 17",
+          "url": "https://shop.garypencastudio.com/product-page/utopia-41x17"
+        },
+        {
+          "label": "Print 53 × 23",
+          "url": "https://shop.garypencastudio.com/product-page/utopia-53x23"
+        }
+      ]
+    },
+    "Snook Buffet": {
+      "prints": [
+        {
+          "label": "Print 30 × 20",
+          "url": "https://shop.garypencastudio.com/product-page/snook-buffet-30x20"
+        },
+        {
+          "label": "Print 39 × 25",
+          "url": "https://shop.garypencastudio.com/product-page/snook-buffet"
+        }
+      ]
+    },
+    "New Arrivals": {
+      "prints": [
+        {
+          "label": "Print 30 × 20",
+          "url": "https://shop.garypencastudio.com/product-page/new-arrivals-30x20"
+        },
+        {
+          "label": "Print 39 × 25",
+          "url": "https://shop.garypencastudio.com/product-page/copy-of-alpha-39x25"
+        }
+      ]
+    },
+    "Cruising Tarpon": {
+      "prints": [
+        {
+          "label": "Print 30 × 20",
+          "url": "https://shop.garypencastudio.com/product-page/cruising-tarpon-30x20"
+        },
+        {
+          "label": "Print 39 × 25",
+          "url": "https://shop.garypencastudio.com/product-page/copy-of-new-arrivals-39x25"
+        }
+      ]
+    },
+    "Watchful Eyes": {
+      "prints": [
+        {
+          "label": "Print 41 × 17",
+          "url": "https://shop.garypencastudio.com/product-page/watchful-eyes-41x17"
+        },
+        {
+          "label": "Print 53 × 23",
+          "url": "https://shop.garypencastudio.com/product-page/watchful-eyes-53x23"
+        }
+      ]
+    }
+  },
+  "fish-out-of-water": {
+    "Yellow Seahorse": {
+      "original": "https://shop.garypencastudio.com/product-page/yellow-seahorse",
+      "prints": "https://shop.garypencastudio.com/product-page/longnose-seahorse-1"
+    },
+    "Four Eye Butterflyfish": {
+      "prints": [
+        {
+          "label": "Laser Print 9 × 12",
+          "url": "https://shop.garypencastudio.com/product-page/foureye-butterflyfish-2"
+        },
+        {
+          "label": "Giclée Print 9 × 12",
+          "url": "https://shop.garypencastudio.com/product-page/foureye-butterflyfish"
+        }
+      ]
+    },
+    "French Angelfish": {
+      "original": "https://shop.garypencastudio.com/product-page/french-angelfish",
+      "prints": "https://shop.garypencastudio.com/product-page/french-angelfish-2"
+    },
+    "Balloonfish": {
+      "prints": [
+        {
+          "label": "Laser Print 9 × 12",
+          "url": "https://shop.garypencastudio.com/product-page/balloonfish-2"
+        },
+        {
+          "label": "Giclée Print 9 × 12",
+          "url": "https://shop.garypencastudio.com/product-page/balloonfish-1"
+        }
+      ]
+    },
+    "Clownfish": {
+      "original": "https://shop.garypencastudio.com/product-page/clownfish",
+      "prints": "https://shop.garypencastudio.com/product-page/longnose-seahorse"
+    },
+    "Queen angelfish": {
+      "original": "https://shop.garypencastudio.com/product-page/queen-angelfish",
+      "prints": "https://shop.garypencastudio.com/product-page/queen-angelfish-2"
+    },
+    "Conch": {
+      "original": "https://shop.garypencastudio.com/product-page/queen-conch",
+      "prints": "https://shop.garypencastudio.com/product-page/queen-conch-2"
+    },
+    "Smooth Trunkfish": {
+      "original": "https://shop.garypencastudio.com/product-page/smooth-trunkfish",
+      "prints": "https://shop.garypencastudio.com/product-page/smooth-trunkfish-2"
+    },
+    "Spotted Trunkfish": {
+      "original": "https://shop.garypencastudio.com/product-page/spotted-trunkfish-1",
+      "prints": "https://shop.garypencastudio.com/product-page/spotted-trunkfish-2"
+    },
+    "Moorish Idol": {
+      "original": "https://shop.garypencastudio.com/product-page/moorish-idol-original",
+      "prints": "https://shop.garypencastudio.com/product-page/copy-of-moorish-idol"
+    }
+  }
+}
