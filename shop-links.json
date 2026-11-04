@@ -18,6 +18,21 @@
     "Honeybee": {
       "prints": "https://shop.garypencastudio.com/product-page/honeybee-giclee-print",
       "original": "https://shop.garypencastudio.com/product-page/honeybee"
+    },
+    "Walking Iris": {
+      "original": "https://shop.garypencastudio.com/product-page/regina-walking-iris"
+    },
+    "Regina Walking Iris": {
+      "original": "https://shop.garypencastudio.com/product-page/regina-walking-iris"
+    },
+    "Pond Lilly 5X7": {
+      "original": "https://shop.garypencastudio.com/product-page/blue-water-lilly"
+    },
+    "Pond Lilly": {
+      "original": "https://shop.garypencastudio.com/product-page/blue-water-lilly"
+    },
+    "Pond Lily": {
+      "original": "https://shop.garypencastudio.com/product-page/blue-water-lilly"
     }
   },
   "balloons": {
@@ -40,6 +55,10 @@
     "Green Balloon": {
       "prints": "https://shop.garypencastudio.com/product-page/green-balloon-giclee-print",
       "original": "https://shop.garypencastudio.com/product-page/green-balloon"
+    },
+    "Pink Balloon": {
+      "prints": "https://shop.garypencastudio.com/product-page/pink-balloon-limited-edition",
+      "original": "https://shop.garypencastudio.com/product-page/pink-balloon"
     }
   },
   "reefscapes": {
