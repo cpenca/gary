@@ -14,7 +14,7 @@
     },
     {
       "path": "images/Botanicals/Pond Lilly 5X7.jpg",
-      "caption": "Pond Lilly 5X7"
+      "caption": "Pond Lilly"
     },
     {
       "path": "images/Botanicals/Salmon Moth orchid .jpg",
@@ -100,47 +100,47 @@
     },
     {
       "path": "images/Reefscapes/Patch reef matted 15\".png",
-      "caption": "Patch reef matted 15\""
+      "caption": "Patch reef"
     },
     {
       "path": "images/Reefscapes/Reef Hunter matted 15\".png",
-      "caption": "Reef Hunter matted 15\""
+      "caption": "Reef Hunter"
     }
   ],
   "conceptual-art": [
     {
       "path": "images/Conceptual Art/Conspiculates 15\".png",
-      "caption": "Conspiculates 15\""
+      "caption": "Conspiculates"
     },
     {
       "path": "images/Conceptual Art/Lionfish 15\".png",
-      "caption": "Lionfish 15\""
+      "caption": "Lionfish"
     },
     {
       "path": "images/Conceptual Art/No Escape 15\".png",
-      "caption": "No Escape 15\""
+      "caption": "No Escape"
     },
     {
       "path": "images/Conceptual Art/Rainbow Butterflyfish 15\".png",
-      "caption": "Rainbow Butterflyfish 15\""
+      "caption": "Rainbow Butterflyfish"
     },
     {
       "path": "images/Conceptual Art/Surreal Shallows 15\".png",
-      "caption": "Surreal Shallows 15\""
+      "caption": "Surreal Shallows"
     },
     {
       "path": "images/Conceptual Art/The Bubble 15\".png",
-      "caption": "The Bubble 15\""
+      "caption": "The Bubble"
     },
     {
       "path": "images/Conceptual Art/Visionary  15\".png",
-      "caption": "Visionary  15\""
+      "caption": "Visionary"
     }
   ],
   "under-the-pier": [
     {
       "path": "images/Under the Pier/Cruising Tarpon matted.png",
-      "caption": "Cruising Tarpon matted"
+      "caption": "Cruising Tarpon"
     },
     {
       "path": "images/Under the Pier/New Arrivals.png",
@@ -148,15 +148,15 @@
     },
     {
       "path": "images/Under the Pier/Snook Buffet matted.png",
-      "caption": "Snook Buffet matted"
+      "caption": "Snook Buffet"
     },
     {
       "path": "images/Under the Pier/Utopia matted.png",
-      "caption": "Utopia matted"
+      "caption": "Utopia"
     },
     {
       "path": "images/Under the Pier/Watchful Eyes matted.png",
-      "caption": "Watchful Eyes matted"
+      "caption": "Watchful Eyes"
     }
   ]
 }
